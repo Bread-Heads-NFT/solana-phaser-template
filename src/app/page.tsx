@@ -18,7 +18,11 @@ export default function Home() {
   // You can also provide a custom RPC endpoint.
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
 
-  const adapter = useMemo(() => new TipLinkWalletAdapter(), []);
+  const adapter = useMemo(() => new TipLinkWalletAdapter({
+    title: "Solana Phaser Template",
+    clientId: "694bf97c-d2ac-4dfc-a786-a001812658df",
+    theme: 'dark'
+  }), []);
 
   return (
     <main>
