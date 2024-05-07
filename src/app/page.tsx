@@ -1,4 +1,5 @@
 'use client';
+import { UmiProvider } from "@/providers/UmiProvider";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import { ConnectionProvider, WalletProvider } from "@solana/wallet-adapter-react";
 import { clusterApiUrl } from "@solana/web3.js";
@@ -29,10 +30,12 @@ export default function Home() {
       < ConnectionProvider endpoint={endpoint} >
         <WalletProvider wallets={[adapter]} autoConnect>
           <TipLinkWalletModalProvider title="cHack" logoSrc="/dapp_icon.png" theme={TipLinkModalTheme.DARK}>
-            <div className="p-5 w-full">
-              <WalletMultiButton className="ml-auto" />
-              <Game />
-            </div>
+            <UmiProvider>
+              <div className="p-5 w-full">
+                <WalletMultiButton className="ml-auto" />
+                <Game />
+              </div>
+            </UmiProvider>
           </TipLinkWalletModalProvider>
         </WalletProvider>
       </ConnectionProvider >
