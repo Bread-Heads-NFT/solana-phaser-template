@@ -29,7 +29,7 @@ export default function Home() {
     <main>
       < ConnectionProvider endpoint={endpoint} >
         <WalletProvider wallets={[adapter]} autoConnect>
-          <TipLinkWalletModalProvider title="cHack" logoSrc="/dapp_icon.png" theme={TipLinkModalTheme.DARK}>
+          <TipLinkWalletModalProvider title="Hello Phaser" logoSrc="/assets/logo.png" theme={TipLinkModalTheme.DARK}>
             <UmiProvider>
               <div className="p-5 w-full">
                 <WalletMultiButton className="ml-auto" />

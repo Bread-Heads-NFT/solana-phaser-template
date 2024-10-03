@@ -1,5 +1,5 @@
 {
-  "name": "chack-client",
+  "name": "solana-phaser-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,25 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@metaplex-foundation/digital-asset-standard-api": "^1.0.3",
-    "@metaplex-foundation/mpl-core": "^0.4.6",
-    "@metaplex-foundation/umi": "^0.9.1",
-    "@metaplex-foundation/umi-bundle-defaults": "^0.9.1",
-    "@metaplex-foundation/umi-signer-wallet-adapters": "^0.9.1",
+    "@metaplex-foundation/digital-asset-standard-api": "^1.0.4",
+    "@metaplex-foundation/mpl-core": "^1.1.1",
+    "@metaplex-foundation/umi": "^0.9.2",
+    "@metaplex-foundation/umi-bundle-defaults": "^0.9.2",
+    "@metaplex-foundation/umi-signer-wallet-adapters": "^0.9.2",
     "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/wallet-adapter-react": "^0.15.35",
     "@solana/wallet-adapter-react-ui": "^0.9.35",
     "@solana/wallet-adapter-wallets": "^0.19.32",
     "@solana/web3.js": "^1.91.8",
-    "@tiplink/wallet-adapter": "^2.1.13",
-    "@tiplink/wallet-adapter-react-ui": "^0.1.11",
+    "@tiplink/wallet-adapter": "^2.1.21",
+    "@tiplink/wallet-adapter-react-ui": "^1.0.0",
     "next": "14.2.3",
-    "phaser": "^3.80.1",
+    "phaser": "^3.85.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
@@ -36,5 +36,6 @@
     "postcss": "^8",
     "tailwindcss": "^3",
     "typescript": "^5"
-  }
+  },
+  "packageManager": "pnpm@8.15.9"
 }
