@@ -6,6 +6,7 @@ import { dasApi } from '@metaplex-foundation/digital-asset-standard-api';
 import { mplCore } from '@metaplex-foundation/mpl-core';
 import { generateSigner, signerIdentity } from '@metaplex-foundation/umi';
 import { UmiContext } from './useUmi';
+import { mplToolbox } from '@metaplex-foundation/mpl-toolbox';
 
 export const UmiProvider = ({
     children,
@@ -13,7 +14,6 @@ export const UmiProvider = ({
     children: ReactNode;
 }) => {
     const wallet = useWallet();
-    const { connection } = useConnection();
     // let nftStorageToken = process.env.NFTSTORAGE_TOKEN;
     // if (!nftStorageToken || nftStorageToken === 'AddYourTokenHere'){
     //   console.error("Add your nft.storage Token to .env!");
@@ -21,16 +21,17 @@ export const UmiProvider = ({
     // }
 
     const umi = useMemo(() => {
-        const u = createUmi(connection)
+        const u = createUmi(process.env.NEXT_PUBLIC_RPC_URL || "https://api.devnet.solana.com")
             .use(mplCore())
-            .use(dasApi());
+            .use(dasApi())
+            .use(mplToolbox());
 
         if (wallet.connected) {
             return u.use(walletAdapterIdentity(wallet));
         }
         const anonSigner = generateSigner(u);
         return u.use(signerIdentity(anonSigner));
-    }, [wallet, connection]);
+    }, [wallet]);
 
     return <UmiContext.Provider value={{ umi }}>{children}</UmiContext.Provider>;
 };
