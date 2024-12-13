@@ -51,8 +51,8 @@ dependencies:
     specifier: 14.2.3
     version: 14.2.3(@babel/core@7.25.7)(react-dom@18.3.1)(react@18.3.1)
   phaser:
-    specifier: ^3.85.2
-    version: 3.85.2
+    specifier: ^3.87.0
+    version: 3.87.0
   react:
     specifier: ^18.3.1
     version: 18.3.1
@@ -9476,8 +9476,8 @@ packages:
       sha.js: 2.4.11
     dev: false
 
-  /phaser@3.85.2:
-    resolution: {integrity: sha512-bD/58E1gvCsEH0Lftb2BiJ8FQ86kb8HHOS656lLXPwg8ZXkskZGsfdyQO21Y57+neGOUEaUthSFfDyVULy5B1g==}
+  /phaser@3.87.0:
+    resolution: {integrity: sha512-AyI1b3T5fp05gzf6WUmu2FNqaZL+Y7w88yBRLf7YZXF9bncUSHpnDrupnTGoPqy/RKHRLBcay7zWeqQ2wiMWcw==}
     dependencies:
       eventemitter3: 5.0.1
     dev: false
